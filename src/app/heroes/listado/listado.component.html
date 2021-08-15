@@ -1,0 +1,28 @@
+
+<h1> Listado de Heroes | Tercer Componente  </h1>
+
+<div *ngIf = " heroeBorrado; else noBorrado ">
+        
+    <h1>Heroe Borrado:<small> {{ heroeBorrado }} </small> </h1>
+
+</div>
+
+<ng-template #noBorrado>
+
+    <h2> No hay Ningun Heroe Borrado </h2>
+
+</ng-template>
+
+<ul>
+
+    <li *ngFor="let heroe of heroes; let i = index">
+       {{i + 1}} {{ heroe }}
+    </li>
+
+    <button class="btn btn-primary" (click)=' borrarHeroe() ' > Borrar Heroe </button>
+
+    <br>
+
+
+
+</ul>
